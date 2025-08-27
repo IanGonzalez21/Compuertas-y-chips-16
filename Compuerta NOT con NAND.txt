@@ -1,0 +1,11 @@
+//Compuerta NOT con NAND
+
+
+CHIP And {
+    IN x,y;
+    OUT f;
+    
+    PARTS:
+    Nand(a= x, b=x , out=f );
+    
+}
