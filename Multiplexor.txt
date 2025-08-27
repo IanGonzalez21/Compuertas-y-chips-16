@@ -1,0 +1,14 @@
+//Multiplexor
+
+
+CHIP Mux {
+    IN x,y,sel;
+    OUT f;
+    
+    PARTS:
+    Not(in=sel , out=notsel );
+    And(a=x , b=notsel , out=xnotsel );
+    And(a=y , b=sel , out=ysel );
+    Or(a=ysel , b=xnotsel , out= f);
+
+}

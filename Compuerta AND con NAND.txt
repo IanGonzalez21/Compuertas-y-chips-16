@@ -1,0 +1,12 @@
+//Compuerta AND con NAND
+
+
+CHIP And {
+    IN x,y;
+    OUT f;
+    
+    PARTS:
+    Nand(a=x , b=y , out=xnandy );
+    Nand(a=xnandy , b=xnandy , out=f );
+    
+}
